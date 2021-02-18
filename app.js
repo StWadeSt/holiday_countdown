@@ -58,7 +58,7 @@ myTimer = setInterval(function(){calculateTimeLeft(newYears)}, 1000);
             document.getElementById('year').innerText = "2021"
         }
 
-        if (myVar != null) {
+        if (myTimer != null) {
             clearTimer();
         }
         myTimer = setInterval(function(){calculateTimeLeft(holiday)}, 1000);
