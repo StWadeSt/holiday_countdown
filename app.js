@@ -28,7 +28,7 @@ myTimer = setInterval(function(){calculateTimeLeft(newYears)}, 1000);
 
         //if statement varifies which option was chosen and calls function to change the counter
         if (option == 1) {
-            changeHoliday(christmas,'url("christmas.jpg")','Countdown to Chistmas');  
+            changeHoliday(christmas,'christmas.jpg','Countdown to Chistmas');  
         }else if(option == 2){
             changeHoliday(valentines,'valentines.jpg','Countdown to Valentines Day');  
         }
@@ -46,8 +46,6 @@ myTimer = setInterval(function(){calculateTimeLeft(newYears)}, 1000);
 
         //getting the label showing the Year this will be changed depending on which option is chosen 
         var year = document.getElementById('year')
-
-
         document.body.style.background = background;
 
         document.getElementById('countdownString').innerText = string
@@ -91,6 +89,5 @@ function calculateTimeLeft(then){
     document.getElementById('second').innerText = s;
 
 }
-
 
 
