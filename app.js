@@ -67,7 +67,7 @@ myTimer = setInterval(function(){calculateTimeLeft(newYears)}, 1000);
     }
 
 function clearTimer() {
-    clearInterval(myVar);
+    clearInterval(myTimer);
 }
     
 
