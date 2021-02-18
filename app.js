@@ -6,6 +6,7 @@ const eastor = new Date('Apr 4, 2021 00:00:00').getTime();
 const thanksgiving = new Date('Nov 25, 2021 00:00:00').getTime();
 
 
+
 // variable holding my timer. Will be used to set intervals and clear intervals
 var myTimer;
 
@@ -28,32 +29,31 @@ myTimer = setInterval(function(){calculateTimeLeft(newYears)}, 1000);
 
         //if statement varifies which option was chosen and calls function to change the counter
         if (option == 1) {
-            changeHoliday(christmas,'christmas.jpg','Countdown to Chistmas');  
+            changeHoliday(christmas,'christmas.jpg','Countdown to Chistmas', 'Dec 25th 2021');  
         }else if(option == 2){
-            changeHoliday(valentines,'valentines.jpg','Countdown to Valentines Day');  
+            changeHoliday(valentines,'valentines.jpg','Countdown to Valentines Day', 'Feb 14th 2021');  
         }
         else if(option == 3){
-            changeHoliday(eastor,'eastor.jpg','Countdown to Eastor');  
+            changeHoliday(eastor,'eastor.jpg','Countdown to Eastor', 'Apr 4th 2021');  
         }
         else if(option == 4){
-            changeHoliday(thanksgiving,'thanksgiving.jpg','Countdown to Thanksgiving');  
+            changeHoliday(thanksgiving,'thanksgiving.jpg','Countdown to Thanksgiving', 'Nov 25th 2021');  
         }else {
-            changeHoliday(newYears,'new_years.jpg','Countdown to New Years');  
+            changeHoliday(newYears,'new_years.jpg','Countdown to New Years','Jan 1st 2020');  
         }
     })
 
-    function changeHoliday(holiday,background,string){
+    function changeHoliday(holiday,background,string,date){
 
-        //getting the label showing the Year this will be changed depending on which option is chosen 
-        var year = document.getElementById('year')
         document.body.style.background = background;
 
         document.getElementById('countdownString').innerText = string
-        if (holiday == newYears || holiday == valentines ) {
-            document.getElementById('year').innerText = "2022"
+        document.getElementById('date').innerText = date
+        if (holiday == valentines ) {
+            document.getElementById('date').innerText = "Feb 14th 2022"
         }
-        else{
-            document.getElementById('year').innerText = "2021"
+        else if(holiday == newYears){
+            document.getElementById('date').innerText = "Jan 1st 2022"
         }
 
         if (myTimer != null) {
@@ -89,5 +89,6 @@ function calculateTimeLeft(then){
     document.getElementById('second').innerText = s;
 
 }
+
 
 
